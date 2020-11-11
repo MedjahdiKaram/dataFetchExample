@@ -7,6 +7,9 @@ import {
   fetchDataSuccess,
 } from "../redux/actions/useFetchActions";
 
+/**
+ * Configuration instance to be used with useFetch hook
+ */
 export const UseFetch = {
   config: {},
   configure: function (configParam) {
@@ -14,6 +17,9 @@ export const UseFetch = {
   },
 };
 
+/**
+ * CThe hook that fetch the data from any api specified on the baseUrl and the endpoint defined on the call back of fetch function
+ */
 export const useFetch = (fetchInput = null) => {
   const dispatch = useDispatch();
   const message = useSelector((state) => state);

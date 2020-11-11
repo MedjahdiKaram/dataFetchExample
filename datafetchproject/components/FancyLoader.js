@@ -1,5 +1,8 @@
 import React from "react";
-
+/**
+ * A small simple component. displayed once the data is still loading
+ *
+ */
 function FancyLoader() {
   return (
     <div>
