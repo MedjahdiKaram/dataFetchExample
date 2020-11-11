@@ -24,10 +24,10 @@ export const useFetch = (fetchInput = null) => {
       : ""; //nothing to be added if the query parameters are not defined
     dispatch(fetchDataBegin());
 
-    axios
-      .get(UseFetch.config.baseUrl + endpoint + queryParamsString)
-      .then((res) => {
-        dispatch(fetchDataSuccess({ [endpoint]: res.data }));
+    fetch(UseFetch.config.baseUrl + endpoint + queryParamsString)
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch(fetchDataSuccess({ [endpoint]: json }));
       });
   }
 

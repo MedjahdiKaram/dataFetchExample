@@ -5,7 +5,6 @@ import {
 
 const theState = { data: "" };
 export default function fetchDataReducer(state = theState, action) {
-  console.log("Action: ", action);
   switch (action.type) {
     case FETCH_DATA_SUCCESS:
       localStorage.setItem(
